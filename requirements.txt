@@ -1,2 +1,3 @@
 git+https://github.com/Chiggy-Playz/enhanced-discord.py@modals
 python-dotenv
+git+https://github.com/Gorialis/jishaku
