@@ -2,6 +2,7 @@ import discord
 from discord.ext import commands
 from discord.ui import Modal, InputText
 import os
+import dotenv
 
 # Defines a custom Modal with questions
 # that user has to answer. The callback function
@@ -80,6 +81,6 @@ async def modal(ctx: commands.Context):
     # Sending our modal
     await ctx.interaction.response.send_modal(modal)
 
-
+dotenv.load_dotenv()
 bot.run(os.environ["TOKEN"])
 #ngl very cool
