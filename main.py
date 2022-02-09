@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from discord.ui import Modal, InputText
+from discord.ui import Modal, TextInput
 import os
 import dotenv
 
@@ -13,16 +13,16 @@ class Modal(Modal):
 
         # Set the questions that will be shown in the modal
         # The placeholder is what will be shown when nothing is typed
-        #self.add_item(InputText(label="What reason do you have to add your bot?"))
+        #self.add_item(TextInput(label="What reason do you have to add your bot?"))
 
         # Provide value argument to prefill the input
         # The style parameter allows you to set the style of the input
         # You can choose from short and long
         self.add_item(
-            InputText(
+            TextInput(
                 label="Your Reason for Adding the bot is?:",
                 value="",
-                style=discord.InputTextStyle.long,
+                style=discord.TextInputStyle.long,
             )
         )
 
