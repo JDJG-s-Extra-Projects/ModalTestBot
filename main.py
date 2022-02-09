@@ -8,19 +8,19 @@ import os
 # of this class is called when the user submits the modal
 class Modal(Modal):
     def __init__(self) -> None:
-        super().__init__("My Cool Form 1")
+        super().__init__("AddBot:")
 
         # Set the questions that will be shown in the modal
         # The placeholder is what will be shown when nothing is typed
-        self.add_item(InputText(label="What is your name?", placeholder="Reveal your secrets!"))
+        #self.add_item(InputText(label="What reason do you have to add your bot?"))
 
         # Provide value argument to prefill the input
         # The style parameter allows you to set the style of the input
         # You can choose from short and long
         self.add_item(
             InputText(
-                label="What is the meaning of life?",
-                value="The meaning of life is ...",
+                label="Your Reason for Adding the bot is?:",
+                value="",
                 style=discord.InputTextStyle.long,
             )
         )
@@ -31,7 +31,7 @@ class Modal(Modal):
         # Modal object, and the values attribute gets a list of the user's
         # answers. We only want the first one.
         await interaction.response.send_message(
-            f"Your name is {self.children[0].value}\n" f"The meaning of life is {self.children[1].value}\n"
+            f"Sent Reason: {self.children[0].value} to my boss."
         )
 
 
