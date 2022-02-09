@@ -3,6 +3,7 @@ from discord.ext import commands
 from discord.ui import Modal, TextInput
 import os
 import dotenv
+import jishaku
 
 # Defines a custom Modal with questions
 # that user has to answer. The callback function
@@ -82,5 +83,6 @@ async def modal(ctx: commands.Context):
     await ctx.interaction.response.send_modal(modal)
 
 dotenv.load_dotenv()
+bot.load_extension("jishaku")
 bot.run(os.environ["TOKEN"])
 #ngl very cool
